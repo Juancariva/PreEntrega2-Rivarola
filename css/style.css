@@ -13,7 +13,13 @@ p {
   text-align: justify;
 }
 
-li {
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
   display: inline-block;
   font-size: 25px;
   padding: 15px;
@@ -26,6 +32,24 @@ li {
   text-decoration: none;
   color: rgb(0, 0, 0);
   margin-right: 1rem;
+  background-color: #e0e0e0;
+}
+
+.nav-link {
+  padding: 0.5rem 1rem;
+  border: 2px solid rgba(0, 0, 0, 0.3215686275);
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+  background-color: #e0e0e0;
+}
+
+.navbar-nav.ms-auto {
+  margin-left: auto;
 }
 
 img {
@@ -45,19 +69,6 @@ img {
   border: 1px solid rgb(0, 0, 0);
   display: flex;
   justify-content: center;
-}
-
-.nav a {
-  padding: 0.5rem 1rem;
-  border: 2px solid rgba(0, 0, 0, 0.3215686275);
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.nav a:hover {
-  background-color: #e0e0e0;
 }
 
 #main-index {
@@ -190,16 +201,6 @@ button {
     width: 30%;
     height: 150px;
   }
-  li {
-    display: block;
-    text-align: center;
-    padding: 15px;
-  }
-  .pagina-actual {
-    display: block;
-    margin: 0.5rem auto;
-    width: fit-content;
-  }
   #main-productos {
     padding: 1rem;
     gap: 2rem;
@@ -290,13 +291,6 @@ button {
   p {
     font-size: 18px;
     text-align: justify;
-  }
-  li {
-    font-size: 22px;
-    padding: 10px;
-  }
-  .pagina-actual {
-    margin: 0.5rem;
   }
   .mapa {
     width: 30%;
