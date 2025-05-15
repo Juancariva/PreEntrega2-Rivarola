@@ -1,67 +1,3 @@
-.titulo {
-  font-size: 45px;
-  color: rgb(3, 98, 223);
-  display: flex;
-  justify-content: center;
-  text-shadow: rgba(2, 46, 104, 0.856) 2px 1px;
-}
-
-p {
-  line-height: 1.5;
-  font-size: 20px;
-  padding: 20px;
-  text-align: justify;
-}
-
-.navbar-nav {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.nav-item {
-  display: inline-block;
-  font-size: 25px;
-  padding: 15px;
-}
-
-.pagina-actual {
-  font-weight: bold;
-  padding: 0.5rem 1rem;
-  border: 2px solid rgb(0, 0, 0);
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-  margin-right: 1rem;
-  background-color: #e0e0e0;
-}
-
-.nav-link {
-  padding: 0.5rem 1rem;
-  border: 2px solid rgba(0, 0, 0, 0.3215686275);
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.nav-link:hover {
-  background-color: #e0e0e0;
-}
-
-.navbar-nav.ms-auto {
-  margin-left: auto;
-}
-
-img {
-  width: 500px;
-  padding: 60px;
-}
-
-.mapa {
-  width: 400px;
-  height: 200px;
-}
-
 #header {
   background-color: rgb(0, 174, 255);
   color: rgb(0, 0, 0);
@@ -71,16 +7,76 @@ img {
   justify-content: center;
 }
 
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.navbar-nav .nav-item {
+  display: inline-block;
+  font-size: 25px;
+  padding: 15px;
+}
+.navbar-nav .nav-item .nav-link {
+  padding: 0.5rem 1rem;
+  border: 2px solid rgba(0, 0, 0, 0.3215686275);
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+.navbar-nav .nav-item .nav-link:hover {
+  background-color: #e0e0e0;
+}
+.navbar-nav .nav-item .nav-link.pagina-actual {
+  font-weight: bold;
+  border: 2px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  background-color: #e0e0e0;
+}
+
 #main-index {
   display: grid;
   grid-template-columns: 3fr 2fr;
   justify-items: center;
+}
+#main-index .texto-index {
+  padding-left: 4rem;
+}
+#main-index .texto-index .titulo {
+  font-size: 45px;
+  color: rgb(3, 98, 223);
+  display: flex;
+  justify-content: center;
+  text-shadow: rgba(2, 46, 104, 0.856) 2px 1px;
+}
+
+img {
+  width: 500px;
+  padding: 60px;
+}
+
+p {
+  line-height: 1.5;
+  font-size: 20px;
+  padding: 20px;
+  text-align: justify;
 }
 
 #main-productos {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+#main-productos .section-productos {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  gap: 2rem;
+}
+#main-productos .section-productos .imagen-productos img {
+  width: 500px;
+  padding: 60px;
 }
 
 #main-ofertas {
@@ -95,6 +91,22 @@ img {
   gap: 3rem;
   padding-top: 2rem;
 }
+#main-sobre-nosotros .texto-sobre-nosotros {
+  max-width: 800px;
+  text-align: center;
+}
+#main-sobre-nosotros .imagenes-sobre-nosotros {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  justify-items: center;
+}
+#main-sobre-nosotros .imagenes-sobre-nosotros img {
+  width: 90%;
+  max-width: 550px;
+  min-width: 250px;
+  padding: 15px;
+}
 
 #main-contacto {
   display: flex;
@@ -103,58 +115,22 @@ img {
   padding: 20px;
   gap: 20px;
 }
-
-#form {
+#main-contacto #form {
   display: flex;
   flex-direction: column;
   width: 600px;
   gap: 15px;
 }
-
-.texto-index {
-  padding-left: 4rem;
-}
-
-.section-productos {
-  display: flex;
-  align-items: center;
-  padding: 1rem;
-  gap: 2rem;
-}
-
-.imagen-productos img {
-  width: 500px;
-  padding: 60px;
-}
-
-.texto-sobre-nosotros {
-  max-width: 800px;
-  text-align: center;
-}
-
-.imagenes-sobre-nosotros {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  width: 100%;
-  justify-items: center;
-}
-
-form {
-  width: 100%;
-}
-
-label {
+#main-contacto #form label {
   font-size: 25px;
 }
-
-input,
-textarea {
+#main-contacto #form input,
+#main-contacto #form textarea {
   width: 100%;
   padding: 1rem;
   font-size: 25px;
 }
-
-button {
+#main-contacto #form button {
   padding: 1rem;
   font-size: 2rem;
   margin: 1.5rem;
@@ -171,6 +147,10 @@ button {
   border: 1px solid rgb(0, 0, 0);
   display: flex;
 }
+#footer .mapa {
+  width: 400px;
+  height: 200px;
+}
 
 /* Responsive: dispositivos de hasta 800px */
 @media screen and (max-width: 800px) {
@@ -180,11 +160,10 @@ button {
     align-items: center;
     padding: 1rem;
   }
-  .texto-index {
-    padding-left: 0;
+  #main-index .texto-index {
     padding: 1rem;
   }
-  .titulo {
+  #main-index .texto-index .titulo {
     font-size: 32px;
     text-align: center;
   }
@@ -197,20 +176,16 @@ button {
     width: 90%;
     padding: 20px;
   }
-  .mapa {
-    width: 30%;
-    height: 150px;
-  }
   #main-productos {
     padding: 1rem;
     gap: 2rem;
   }
-  .section-productos {
+  #main-productos .section-productos {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-  .imagen-productos img {
+  #main-productos .section-productos .imagen-productos img {
     width: 90%;
     padding: 20px;
   }
@@ -232,44 +207,47 @@ button {
     padding: 10px;
   }
   #main-sobre-nosotros {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 1rem;
   }
-  .texto-sobre-nosotros p {
+  #main-sobre-nosotros .texto-sobre-nosotros p {
     font-size: 17px;
     text-align: justify;
     padding: 1rem;
   }
-  .imagenes-sobre-nosotros {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+  #main-sobre-nosotros .imagenes-sobre-nosotros {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    grid-auto-flow: row;
+    justify-items: center;
   }
-  .imagenes-sobre-nosotros img {
+  #main-sobre-nosotros .imagenes-sobre-nosotros div:nth-child(3) {
+    grid-column: span 2;
+  }
+  #main-sobre-nosotros .imagenes-sobre-nosotros img {
     width: 90%;
-    max-width: 400px;
+    max-width: 300px;
     padding: 10px;
   }
-  form {
+  #main-contacto #form {
     width: 100%;
     max-width: 400px;
   }
-  label {
+  #main-contacto #form label {
     font-size: 20px;
   }
-  input,
-  textarea {
-    width: 100%;
+  #main-contacto #form input,
+  #main-contacto #form textarea {
     padding: 0.8rem;
     font-size: 19px;
   }
-  button {
+  #main-contacto #form button {
     padding: 1rem;
     margin: 1rem;
     font-size: 1.2rem;
+  }
+  #footer .mapa {
+    width: 30%;
+    height: 150px;
   }
 }
 /* Responsive: dispositivos de 800px - 1200 */
@@ -281,10 +259,10 @@ button {
     padding: 2rem;
     gap: 2rem;
   }
-  .texto-index {
+  #main-index .texto-index {
     padding: 1rem;
   }
-  .titulo {
+  #main-index .texto-index .titulo {
     font-size: 40px;
     margin-bottom: 6rem;
   }
@@ -292,25 +270,18 @@ button {
     font-size: 18px;
     text-align: justify;
   }
-  .mapa {
-    width: 30%;
-    height: 150px;
-  }
   #main-productos {
     padding: 2rem;
     gap: 2rem;
   }
-  .section-productos {
+  #main-productos .section-productos {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-  .imagen-productos img {
+  #main-productos .section-productos .imagen-productos img {
     width: 80%;
     padding: 30px;
-  }
-  .texto {
-    padding: 1rem;
   }
   #main-ofertas {
     display: grid;
@@ -324,36 +295,40 @@ button {
     max-width: 500px;
     padding: 10px;
   }
-  .texto-sobre-nosotros p {
+  #main-sobre-nosotros .texto-sobre-nosotros p {
     font-size: 18px;
     text-align: justify;
   }
-  .imagenes-sobre-nosotros {
-    display: grid;
+  #main-sobre-nosotros .imagenes-sobre-nosotros {
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
   }
-  .imagenes-sobre-nosotros img {
+  #main-sobre-nosotros .imagenes-sobre-nosotros div:nth-child(3) {
+    grid-column: span 2;
+  }
+  #main-sobre-nosotros .imagenes-sobre-nosotros img {
     width: 90%;
     max-width: 500px;
+    min-width: 250px;
+    padding: 15px;
   }
-  form {
+  #main-contacto #form {
     width: 100%;
     max-width: 500px;
   }
-  label {
+  #main-contacto #form label {
     font-size: 20px;
   }
-  input,
-  textarea {
-    width: 100%;
-    padding: 1rem;
+  #main-contacto #form input,
+  #main-contacto #form textarea {
     font-size: 22px;
   }
-  button {
-    padding: 1rem;
-    margin: 1rem;
+  #main-contacto #form button {
     font-size: 1.5rem;
+  }
+  #footer .mapa {
+    width: 30%;
+    height: 150px;
   }
 }
 
