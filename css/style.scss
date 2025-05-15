@@ -1,8 +1,11 @@
+$color-principal: rgb(0, 174, 255);
+$negro: rgb(0, 0, 0);
+
 #header {
-  background-color: rgb(0, 174, 255);
-  color: rgb(0, 0, 0);
+  background-color: $color-principal;
+  color: $negro;
   padding: 10px;
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid $negro;
   display: flex;
   justify-content: center;
 }
@@ -23,16 +26,17 @@
       text-decoration: none;
       color: #333;
       font-weight: bold;
-      transition: background-color 0.3s;
+      transition: background-color 0.3s, transform 0.3s;
 
       &:hover {
         background-color: #e0e0e0;
+        transform: scale(1.1);
       }
 
       &.pagina-actual {
         font-weight: bold;
-        border: 2px solid rgb(0, 0, 0);
-        color: rgb(0, 0, 0);
+        border: 2px solid $negro;
+        color: $negro;
         background-color: #e0e0e0;
       }
     }
@@ -49,10 +53,10 @@
 
     .titulo {
       font-size: 45px;
-      color: rgb(3, 98, 223);
+      color: $color-principal;
       display: flex;
       justify-content: center;
-      text-shadow: rgba(2, 46, 104, 0.856) 2px 1px;
+      text-shadow: rgba(2, 75, 104, 0.856) 2px 1px;
     }
   }
 }
@@ -149,19 +153,19 @@ p {
       padding: 1rem;
       font-size: 2rem;
       margin: 1.5rem;
-      background-color: rgb(0, 174, 255);
-      color: black;
-      border: 1px solid rgb(0, 0, 0);
+      background-color: $color-principal;
+      color: $negro;
+      border: 1px solid $negro;
       cursor: pointer;
     }
   }
 }
 
 #footer {
-  background-color: rgb(0, 174, 255);
-  color: rgb(0, 0, 0);
+  background-color: $color-principal;
+  color: $negro;
   padding: 10px;
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid $negro;
   display: flex;
 
   .mapa {
