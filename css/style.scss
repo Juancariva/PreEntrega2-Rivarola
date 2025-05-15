@@ -102,8 +102,7 @@ p {
   gap: 2rem;
 
   .section-productos {
-    display: flex;
-    align-items: center;
+    @extend %flex-center;
     padding: 1rem;
     gap: 2rem;
 
@@ -121,9 +120,8 @@ p {
 }
 
 #main-sobre-nosotros {
-  display: flex;
+  @extend %flex-center;
   flex-direction: column;
-  align-items: center;
   gap: 3rem;
   padding-top: 2rem;
 
@@ -193,9 +191,8 @@ p {
 
 @media screen and (max-width: 800px) {
   #main-index {
-    display: flex;
+    @extend %flex-center;
     flex-direction: column;
-    align-items: center;
     padding: 1rem;
 
     .texto-index {
@@ -236,16 +233,14 @@ p {
   }
 
   #main-ofertas {
-    display: flex;
+    @extend %flex-center;
     flex-direction: column;
-    align-items: center;
     padding: 1rem;
     gap: 1rem;
 
     section {
       width: 100%;
-      display: flex;
-      justify-content: center;
+      @extend %flex-center;
     }
 
     img {
@@ -314,9 +309,8 @@ p {
 
 @media screen and (min-width: 800px) and (max-width: 1200px) {
   #main-index {
-    display: flex;
+    @extend %flex-center;
     flex-direction: column;
-    align-items: center;
     padding: 2rem;
     gap: 2rem;
 
